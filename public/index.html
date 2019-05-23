@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Random Words</title>
+  </head>
+
+     <style>
+     html, body {
+      background-color: black;
+     }
+     span {
+      color: turquoise;
+     }
+
+     button {
+      background-color: transparent;
+      color: white;
+      border: hidden;
+     }
+      .textdiv {
+        height: 800px;
+      }
+
+      #textarea {
+        width: 100%;
+        height: 80%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+</style>
+  <body>
+    <div >
+        <table class="container" width="100%" border="1px" cellspacing="1" cellpadding="2">
+          <tr class="row">  
+            <td style="background-color:turquoise; text-align:center;" width="10%">Noun</td>
+            <td style="background-color:turquoise; text-align:center;" width="10%">Verb</td>
+            <td style="background-color:turquoise; text-align:center;" width="10%">Adjective</td>
+            <td style="background-color:turquoise; text-align:center;" width="10%">Adverb</td>
+            <td style="background-color:turquoise; text-align:center;" width="10%">Pronoun</td>
+            <td style="background-color:turquoise; text-align:center;" width="10%">Preposition</td>
+            <td style="background-color:turquoise; text-align:center;" width="10%">Conjunction</td>
+            <td style="background-color:turquoise; text-align:center;" width="10%">Determiner</td>
+            <td style="background-color:turquoise; text-align:center;" width="10%">Exclamation</td>
+            <td rowspan="2">
+            <button style= "width:100%;" id="submit">Update</button> 
+            </td>
+          </tr>
+          <tr class="row"> 
+            <td style="text-align:center;"><span>1 </span><button id="Noun" type="button">Noun</button></td>
+            <td style="text-align:center;"><span>2 </span><button id="Verb" type="button">Verb</button></td>
+            <td style="text-align:center;"><span>3 </span><button id="Adjective" type="button">Adjective</button></td>
+            <td style="text-align:center;"><span>4 </span><button id="Adverb" type="button">Adverb</button></td>
+            <td style="text-align:center;"><span>5 </span><button id="Pronoun" type="button">Pronoun</button></td>
+            <td style="text-align:center;"><span>6 </span><button id="Preposition" type="button">Preposition</button></td>
+            <td style="text-align:center;"><span>7 </span><button id="Conjunction" type="button">Conjunction</button></td>
+            <td style="text-align:center;"><span>8 </span><button id="Determiner" type="button">Determiner</button></td>
+            <td style="text-align:center;"><span>9 </span><button id="Exclamation" type="button">Exclamation</button></td>
+          
+          </tr>
+        </table>
+    </div>
+
+  <div>
+    <form>
+      <label>Your Story</label>
+      <div class="textdiv">
+        
+      <textarea type="text" id="textarea" placeholder="Once apon a time..."></textarea>
+      </div>
+
+   </form>
+  </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-storage.js"></script>
+    <script>
+    // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyC2hZZMPm20bm56XMQn4nBbtF3tNjdMRUI",
+        authDomain: "random-words-e4fd3.firebaseapp.com",
+        databaseURL: "https://random-words-e4fd3.firebaseio.com",
+        projectId: "random-words-e4fd3",
+        storageBucket: "",
+        messagingSenderId: "633861980928"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="jquery.min.js"></script>
+    <script src="randomWords.js"></script>
+
+  </body>
+</html>
