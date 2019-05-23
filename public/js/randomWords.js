@@ -269,6 +269,7 @@ $('#textarea').bind('keypress', function(e) {
 
 // $.getJSON("rand.json", function(data){
 
+//  should have used switch statement...................
 // 		for(var i =0; i<data.length-1;i++){
 // 			// console.log(data[i].pos);
 // 			if(data[i].pos=="n"){
